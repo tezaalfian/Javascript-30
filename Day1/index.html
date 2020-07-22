@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drum Kit</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="key">
+        <p>A</p>
+        <span>CLAP</span>
+      </div>
+      <div class="key">
+        <p>S</p>
+        <span>HIHAT</span>
+      </div>
+      <div class="key">
+        <p>D</p>
+        <span>KICK</span>
+      </div>
+      <div class="key">
+        <p>F</p>
+        <span>OPENHAT</span>
+      </div>
+      <div class="key">
+        <p>G</p>
+        <span>BOOM</span>
+      </div>
+      <div class="key">
+        <p>H</p>
+        <span>RIDE</span>
+      </div>
+      <div class="key">
+        <p>J</p>
+        <span>SNARE</span>
+      </div>
+      <div class="key">
+        <p>K</p>
+        <span>TOM</span>
+      </div>
+      <div class="key">
+        <p>L</p>
+        <span>LINK</span>
+      </div>
+    </div>
+
+    <audio class="myaudio" controls>
+      <source src="sounds/clap.wav" type="audio/wav" />
+    </audio>
+    <audio class="myaudio" controls>
+      <source src="sounds/hihat.wav" type="audio/wav" />
+    </audio>
+    <audio class="myaudio" controls>
+      <source src="sounds/kick.wav" type="audio/wav" />
+    </audio>
+    <audio class="myaudio" controls>
+      <source src="sounds/openhat.wav" type="audio/wav" />
+    </audio>
+    <audio class="myaudio" controls>
+      <source src="sounds/boom.wav" type="audio/wav" />
+    </audio>
+    <audio class="myaudio" controls>
+      <source src="sounds/ride.wav" type="audio/wav" />
+    </audio>
+    <audio class="myaudio" controls>
+      <source src="sounds/snare.wav" type="audio/wav" />
+    </audio>
+    <audio class="myaudio" controls>
+      <source src="sounds/tom.wav" type="audio/wav" />
+    </audio>
+    <audio class="myaudio" controls>
+      <source src="sounds/tink.wav" type="audio/wav" />
+    </audio>
+  </body>
+
+  <script>
+    var x = document.querySelectorAll(".myaudio");
+    var tes = document.querySelectorAll(".key");
+
+    for (let i = 0; i < tes.length; i++) {
+      tes[i].addEventListener("mouseenter", function () {
+        x[i].play();
+      });
+    }
+  </script>
+</html>
